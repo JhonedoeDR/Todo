@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>デイリーTodo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page">
+
+  <header class="page-header">
+    <h1>デイリーTodo</h1>
+    <button id="dailyResetBtn" class="reset-btn" type="button">デイリーリセット</button>
+  </header>
+
+  <main class="layout">
+
+    <section class="todo-panel" aria-label="デイリーTodo">
+      <div id="todoGroups" class="todo-groups"></div>
+    </section>
+
+    <aside class="weekly-panel" aria-label="メインタスク週間クリア記録">
+      <div class="weekly-card">
+        <h2>今週のメインタスククリア</h2>
+        <p class="weekly-sub">メインタスクをクリアするたび、次のマスが埋まります</p>
+
+        <div id="weeklyGrid" class="weekly-grid"></div>
+
+        <div id="weeklyCount" class="weekly-count">0 / 14</div>
+
+        <div id="rewardBox" class="reward-box" hidden>
+          <p class="reward-title">今週のメインタスクを14回クリアしました</p>
+          <p class="reward-sub">ごほうびを受け取れます</p>
+        </div>
+      </div>
+    </aside>
+
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
